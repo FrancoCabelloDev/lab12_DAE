@@ -1,0 +1,66 @@
+# .gitignore for Django Project
+
+# Python compiled files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyd
+*.pyo
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+local_settings.py
+media/
+staticfiles/
+static/
+
+# SQLite database
+*.sqlite3
+
+# Virtual environment
+venv/
+.env
+
+# VS Code settings
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Byte-compiled and cache files
+*.log
+*.pot
+*.pyc
+*.swp
+*\~
+*.bak
+*.tmp
+*.orig
+*.sav
+
+# Django secret key
+*.key
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Thunder Client
+thunder-tests/
+
+# IDEs
+.idea/
+
+# .DS_Store (macOS)
+.DS_Store
