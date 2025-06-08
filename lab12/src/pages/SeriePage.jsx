@@ -68,9 +68,15 @@ function SeriePage() {
                 <div className="d-flex flex-col sm:flex-row justify-content-between border-bottom pb-3 mb-3 items-center gap-2">
                     <h3 className="text-2xl font-bold text-blue-700">Series</h3>
                     <div>
-                        <button className="btn btn-primary bg-blue-600 hover:bg-blue-700 border-0 w-full sm:w-auto" onClick={() => setShowForm(true)}>Nuevo</button>
+                        <button 
+                            className="btn btn-primary bg-blue-600 hover:bg-blue-700 border-0 w-full sm:w-auto" 
+                            onClick={() => setShowForm(true)}
+                        >
+                            Nuevo
+                        </button>
                     </div>
                 </div>
+
                 {showForm && (
                     <div className="card mb-4 shadow border border-gray-200 max-w-lg mx-auto">
                         <div className="card-body">
@@ -122,18 +128,31 @@ function SeriePage() {
                                     </div>
                                 )}
                                 <div className="d-flex gap-2 flex-col sm:flex-row">
-                                    <button type="submit" className="btn btn-success bg-green-600 hover:bg-green-700 border-0 w-full sm:w-auto">Guardar</button>
-                                    <button type="button" className="btn btn-secondary bg-gray-400 hover:bg-gray-500 border-0 w-full sm:w-auto" onClick={() => { setShowForm(false); setPreview(null); }}>Cancelar</button>
+                                    <button 
+                                        type="submit" 
+                                        className="btn btn-success bg-green-600 hover:bg-green-700 border-0 w-full sm:w-auto"
+                                    >
+                                        Guardar
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        className="btn btn-secondary bg-gray-400 hover:bg-gray-500 border-0 w-full sm:w-auto" 
+                                        onClick={() => { setShowForm(false); setPreview(null); }}
+                                    >
+                                        Cancelar
+                                    </button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 )}
-                {loading && <div>Cargando...</div>}
+
+                {loading && <div className="alert alert-info">Cargando...</div>}
                 {error && <div className="alert alert-danger">{error}</div>}
                 {!loading && !error && series.length === 0 && (
                     <div className="alert alert-info">No hay series registradas.</div>
                 )}
+
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
                     {series.map((serie) => (
                         <div key={serie.id} className="col flex">
