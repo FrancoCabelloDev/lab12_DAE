@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function HeaderComponent() {
   return (
+    
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <span className="navbar-brand mb-0 h1">SeriesApp</span>
@@ -16,6 +17,7 @@ function HeaderComponent() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
@@ -34,9 +36,14 @@ function HeaderComponent() {
               </NavLink>
             </li>
           </ul>
-          Bienvenido Jhon Doe
+
+          <span className="navbar-text me-3">
+            Bienvenido Jhon Doe
+          </span>
           <div className="text-end">
-            <a href="/">Salir</a>
+            <a className="nav-link" href="/">
+              Salir
+            </a>
           </div>
         </div>
       </div>
